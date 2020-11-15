@@ -30,9 +30,15 @@
 \RequirePackage{hyperref}       % Controla a formação do índice
 \RequirePackage{indentfirst}    % Indenta o primeiro parágrafo do capítulo
 \RequirePackage{graphicx}       % Inclusão de gráficos
+%% -------------------------------------------------------------------------- %%
+%% No pdfTeX 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) parece haver um bug
+%% relacionado ao pgf. A inclusão da seguinte linha parece resolver o problema
+\RequirePackage{pgfkeys, pgfsys, pgfcalendar}
+%% Fonte: https://tex.stackexchange.com/questions/493285/clash-between-pgf-and-transparent-packages
+%% -------------------------------------------------------------------------- %%
 \RequirePackage{lastpage}       % Usado pela ficha catalográfica
 \RequirePackage{textcomp}
-\RequirePackage{multirow}          
+\RequirePackage{multirow}
 \RequirePackage{verbatim}
 \RequirePackage{xstring}        % Manipulação de strings
 \RequirePackage{hyphenat}       % Hifenização
